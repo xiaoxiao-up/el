@@ -81,9 +81,7 @@ public class UserServiceImpl implements UserService {
         if(userRepository.findByUsername(resources.getUsername())!=null){
             throw new EntityExistException(User.class,"username",resources.getUsername());
         }
-        if(userRepository.findByEmail(resources.getEmail())!=null){
-            throw new EntityExistException(User.class,"email",resources.getEmail());
-        }
+
         return userMapper.toDto(userRepository.save(resources));
     }
 

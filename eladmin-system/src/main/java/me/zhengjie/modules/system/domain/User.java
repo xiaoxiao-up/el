@@ -44,11 +44,9 @@ public class User implements Serializable {
     @JoinColumn(name = "avatar_id")
     private UserAvatar userAvatar;
 
-    @NotBlank
     @Email
     private String email;
 
-    @NotBlank
     private String phone;
 
     @NotNull
